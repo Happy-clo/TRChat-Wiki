@@ -6,24 +6,6 @@ description: English language support.
 
 > ### en\_US.yml
 
-{% tabs %}
-{% tab title="PasteBin" %}
-[https://pastebin.com/mEvBqsRp](https://pastebin.com/mEvBqsRp)
-{% endtab %}
-
-{% tab title="Download" %}
-[https://pastebin.com/dl/mEvBqsRp](https://pastebin.com/dl/mEvBqsRp)
-{% endtab %}
-
-{% tab title="Raw" %}
-[https://pastebin.com/raw/mEvBqsRp](https://pastebin.com/raw/mEvBqsRp)
-{% endtab %}
-
-{% tab title="Print" %}
-[https://pastebin.com/print/mEvBqsRp](https://pastebin.com/print/mEvBqsRp)
-{% endtab %}
-{% endtabs %}
-
 ```yaml
 Plugin-Loading:
   - '&r'
@@ -46,7 +28,7 @@ Plugin-Updater-Header:
   - '&3--------------------------------------------------'
   - '&7▪ &3TrChat &aUpdate Notify &8{0} &7➦ &8{1}'
 Plugin-Updater-Footer:
-  - '&7▪ &2Github: &a&nhttps://github.com/FlickerProjects/TrChat/releases'
+  - '&7▪ &2Github: &a&nhttps://github.com/TrPlugins/TrChat/releases'
   - '&3--------------------------------------------------'
 Plugin-Debug-On:
   - type: title
@@ -72,12 +54,20 @@ Error-Version: '&8[&3Tr&bChat&8] &cERROR &8| &7Plugin version error. Please re-d
 General-Too-Long: '&8[&3Tr&bChat&8] &7Message is too long. &8[&6{0}&8/&2{1}&8]'
 General-Too-Similar: '&8[&3Tr&bChat&8] &7Please do not repeat your message.'
 General-No-Permission: '&8[&3Tr&bChat&8] &7You do not have enough permission to do this.'
-General-Muted: '&8[&3Tr&bChat&8] &cYou have been muted until {0}!'
+General-Muted: '&8[&3Tr&bChat&8] &cYou have been muted until {0}!Reason: {1}'
+General-Cancel-Muted: '&8[&3Tr&bChat&8] &aYou can speak now.'
 General-Global-Muting: '&8[&3Tr&bChat&8] &cAll members are being muted.'
 
 Cooldowns-Chat:
   - type: actionbar
     text: '&7&lYou need to wait after &6{0} secs &7&lbefore chatting again.'
+  - type: sound
+    sound: 'ENTITY_ITEM_BREAK'
+    volume: 1
+    pitch: 2
+Cooldowns-Mention-All:
+  - type: actionbar
+    text: '&7&lYou need to wait after &6{0} secs &3&lbefore mentioning all members.'
   - type: sound
     sound: 'ENTITY_ITEM_BREAK'
     volume: 1
@@ -96,19 +86,54 @@ Cooldowns-Inventory-Show:
     sound: 'ENTITY_ITEM_BREAK'
     volume: 1
     pitch: 0
+Cooldowns-EnderChest-Show:
+  - type: actionbar
+    text: '&3&lYou need to wait after &a{0} secs &3&lbefore showing your ender chest again.'
+  - type: sound
+    sound: 'ENTITY_ITEM_BREAK'
+    volume: 1
+    pitch: 0
 
 Command-Controller-Deny: '&c&lYou can not use this command.'
 Command-Controller-Cooldown: '&c&lYou need to wait after &6{0} secs &7&lbefore using this command again.'
 Command-Not-Player: '&8[&3Tr&bChat&8] &cYou must be a player to do this.'
 Command-Player-Not-Exist: '&8[&3Tr&bChat&8] &7The target player is not online or does not exist.'
 
-Mentions-Notify:
+Function-Mention-Format:
+  - type: json
+    text: ' [&a@&2{0}] '
+    args:
+      - hover: '&7Click to chat with me!'
+        suggest: '/tell {1}'
+Function-Mention-Notify:
   - type: actionbar
     text: '&d&l&k|&r &3&lPlayer &a&l{0} &3&lmentioned you in the chat &d&l&k|'
   - type: sound
     sound: 'BLOCK_ANVIL_LAND'
     volume: 1
     pitch: 2
+Function-Item-Show-Format:
+  - type: json
+    text: '[&8\[&3{0} &bx{1}&8\]]'
+    args: [ ]
+Function-Inventory-Show-Format:
+  - type: json
+    text: '[&8\[&3Inventory of {0}&8\]]'
+    args:
+      - hover: '&7Click to view inventory of {0}'
+        command: '/view-inventory {1}'
+Function-Inventory-Show-Unavailable: '&c&This inventory has been expired or does not exist...'
+Function-EnderChest-Show-Format:
+  - type: json
+    text: '[&8\[&3Ender Chest of {0}&8\]]'
+    args:
+      - hover: '&7Click to view ender chest of {0}'
+        command: '/view-enderchest {1}'
+Function-EnderChest-Show-Unavailable: '&c&lThis ender chest has been expired or does not exist...'
+Function-Mention-All-Format:
+  - type: json
+    text: ' [&a@&2Everyone] '
+    args: [ ]
 
 Private-Message-Spy-Format: '&8[&3Spy&8] &6{0} &2-> &3{1}&f: &7{2}'
 Private-Message-Spy-On:
@@ -173,8 +198,16 @@ Channel-No-Speak-Permission:
     sound: 'ENTITY_ITEM_BREAK'
     volume: 1
     pitch: 0
+Channel-Bad-Language:
+  - type: actionbar
+    text: '&cYou cannot speak bad language.'
+  - type: sound
+    sound: 'ENTITY_ITEM_BREAK'
+    volume: 1
+    pitch: 0
 
-Mute-Muted-Player: '&8[&3Tr&bChat&8] &7You muted {0} for {1} minute(s).'
+Mute-Muted-Player: '&8[&3Tr&bChat&8] &7You muted {0} for {1}.Reason: {2}'
+Mute-Cancel-Muted-Player: '&8[&3Tr&bChat&8] &7You cancelled muting {0}.'
 Mute-Muted-All: '&8[&3Tr&bChat&8] &7Global muted.'
 Mute-Cancel-Muted-All: '&8[&3Tr&bChat&8] &7Global mute canceled.'
 ```

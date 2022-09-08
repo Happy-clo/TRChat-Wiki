@@ -11,14 +11,18 @@ TrChat 是基于 [TabooLib](https://docs.tabooproject.org/) 开发，发布于 2
 
 > #### 简洁易懂的配置、各种展示功能
 
-从 Arasple 的 1.71-all 版本到现在的 2.X 版本
+从 Arasple 的 **1.71** 版本到现在的 **2.X** 版本
 
 修复了已知 BUG 的同时，还更进了版本支持,从本来只支持到 1.16.X 到现在的 1.19.X
 
 这些都是在维护者 [ItsFlicker](https://wpa.qq.com/msgrd?v=3\&uin=1812496278\&site=qq\&menu=yes) 的技术上更进的
 
+TrChat **2.0** 几乎完全使用**kotlin**重写
+
+自**2.0.0-PRE-33**开始，已经基本稳定
+
 {% hint style="info" %}
-此文档由 [空神](http://wpa.qq.com/msgrd?v=3\&uin=2966907782\&site=qq\&menu=yes) 和 [晓劫](http://wpa.qq.com/msgrd?v=3\&uin=1503745098\&site=qq\&menu=yes) 共同创作
+此文档由 [空神](http://wpa.qq.com/msgrd?v=3\&uin=2966907782\&site=qq\&menu=yes) 、[晓劫](http://wpa.qq.com/msgrd?v=3\&uin=1503745098\&site=qq\&menu=yes) 和 ItsFlicker 共同创作
 {% endhint %}
 
 {% hint style="danger" %}

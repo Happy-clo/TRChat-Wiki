@@ -30,9 +30,9 @@ General:
     Cooldown: '30s'
     # 展示格式 
     Format: '&8[&3{0} &bx{1}&8]'
-    #  是否展示原名
+    # 是否展示原名
     Origin-Name: false 
-    #  如果使用展示物品的时候踢人，设置为true即可
+    # 如果使用展示物品的时候踢人，设置为true即可
     Compatible: false 
     # 多个触发展示物品格式
     Keys: 
@@ -42,6 +42,8 @@ General:
       - "%item" 
       - "[i]" 
       - "[item]" 
+    # 触发后执行 Kether 动作
+    Actions: [ ]
   # 艾特功能模块
   Mention: 
   # 是否启用
@@ -53,7 +55,9 @@ General:
     # 艾特信息冷却 
     Cooldown: '30s'
     # 是否通知玩家，默认true 
-    Notify: true 
+    Notify: true
+    # 触发后执行 Kether 动作
+    Actions: [ ]
   # 展示玩家自己的背包
   Inventory-Show:
     # 是否启用 
@@ -82,7 +86,7 @@ Custom:
       - '&3网站: {0}' 
       - '' 
       - '&7点击进入!' 
-      - '' - '&8[&c!&8] &7谨防任何诈骗' 
+      - '&8[&c!&8] &7谨防任何诈骗' 
       # 点击后打开的链接,无需修改
       url: '{0}'
 
@@ -137,7 +141,7 @@ Custom:
 
 # 示例 —— 隐藏身份证
   hideIDCardNumber: 
-  pattern: '([1-9]\d{5}[12]\d{3}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])\d{3}[0-9xX])' 
+    pattern: '([1-9]\d{5}[12]\d{3}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])\d{3}[0-9xX])' 
     display: 
       text: '&8[&c&m-&8]' 
       hover: 

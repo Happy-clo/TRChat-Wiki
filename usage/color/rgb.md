@@ -11,11 +11,11 @@ description: 使用RGB颜色。
 ### 用法
 
 ```
-&{FFFFFF} or &{#FFFFFF} or &{256,256,256}
+&{FFFFFF} or &{#FFFFFF}
 ```
 
 ### 示例
 
 ```
-&{FFFFFF}text or &{#FFFFFF}text or &{256,256,256}text
+&{FFFFFF}text or &{#FFFFFF}text
 ```

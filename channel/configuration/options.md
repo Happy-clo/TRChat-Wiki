@@ -19,7 +19,7 @@ Options:
   # 是否强制跨服
   Force-Proxy: false
   # 哪些子服可以接收,写端口名,~代表所有
-  Ports: 1;2;3/~
+  Ports: 25565;...;.../~
   # 禁用Function.yml的模块
   Disabled-Functions: Mention
   # 有脏话就会禁止发送

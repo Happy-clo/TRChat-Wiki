@@ -4,10 +4,6 @@ description: 看到未来
 
 # 聊天预览
 
-{% hint style="warning" %}
-该功能还在测试中
-{% endhint %}
-
 {% hint style="info" %}
 要求：游戏版本 1.19+
 {% endhint %}

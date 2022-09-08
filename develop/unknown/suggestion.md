@@ -12,4 +12,4 @@ description: 对插件提出新功能以及建议。
 开发者采纳后将会在最新版插件内使用
 {% endhint %}
 
-{% embed url="https://github.com/FlickerProjects/TrChat/issues" %}
+{% embed url="https://github.com/TrPlugins/TrChat/issues" %}

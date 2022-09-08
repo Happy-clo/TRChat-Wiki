@@ -12,14 +12,14 @@ description: 对用户进行通缉。
 
 * ItsFlicker
 
-> Github：[https://github.com/FlickerProjects](https://github.com/FlickerProjects)
+> Github：[https://github.com/TrPlugins](https://github.com/TrPlugins)
 >
 > MCBBS：[https://www.mcbbs.net/?2347115](https://www.mcbbs.net/?2347115)
 
 ### 通缉原因
 
-* 已经写了下载地址，还在卖TXT以此恰烂钱
-* 10金粒，就是要水贴 5 次，有多少用户因为要下载 TrChat 没金粒导致水贴被封号
+* ~~已经写了下载地址，还在卖TXT以此恰烂钱~~
+* ~~10金粒，就是要水贴 5 次，有多少用户因为要下载 TrChat 没金粒导致水贴被封号~~
 * 爱心 0 心，不会帮助他人解决问题
 * 圈评分，以哭泣的形式请求他人评分，还扬言要停止更新
 * 利用 BUG 修复内容私占一楼

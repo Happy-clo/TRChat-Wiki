@@ -31,7 +31,7 @@ Local:
   - 'NMSL'
   - 'fuck'
   - 'shit'
-# 敏感词白名单
+# 敏感词白名单 (WIP)
 WhiteList: ['has been']
 # 替换成的内容
 Replacement: '*'

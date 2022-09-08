@@ -5,10 +5,6 @@ coverY: 0
 
 # 聊天设置
 
-{% hint style="success" %}
-此板块编辑完毕
-{% endhint %}
-
 ## 引导
 
 本节中将带你了解 TrChat 频道配置结构中的各个项目以及配置规则

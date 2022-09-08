@@ -6,7 +6,7 @@
 请您升级您的 TrChat 版本至最新版
 {% endhint %}
 
-> #### **所有执行命令的权限都在** [**命令**](https://github.com/FlickerProjects/TrChat/wiki/%E5%91%BD%E4%BB%A4)
+> #### **所有执行命令的权限都在** [**命令**](https://github.com/TrPlugins/TrChat/wiki/%E5%91%BD%E4%BB%A4)
 
 ### 绕过
 

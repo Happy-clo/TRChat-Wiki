@@ -11,4 +11,4 @@ coverY: 0
 
 ### GitHub
 
-{% embed url="https://github.com/FlickerProjects/TrChat" %}
+{% embed url="https://github.com/TrPlugins/TrChat" %}

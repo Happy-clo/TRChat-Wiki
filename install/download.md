@@ -6,25 +6,17 @@ coverY: 85.24229074889867
 
 # 下载
 
-{% hint style="success" %}
-最新构建（建议使用）
-{% endhint %}
+### GitHub Releases（稳定版本）
 
-### GitHub Actions
+{% embed url="https://github.com/TrPlugins/TrChat/releases" %}
 
-{% embed url="https://github.com/FlickerProjects/TrChat" %}
+### GitHub Actions（最新版本）
+
+{% embed url="https://github.com/TrPlugins/TrChat/actions" %}
 
 {% hint style="info" %}
-稳定版本（不建议使用）
+若使用时遇到问题，请先测试最新版后确认未解决再反馈
 {% endhint %}
-
-{% hint style="danger" %}
-一切以最新构建版本为主,稳定版本小于构建版本将无视
-{% endhint %}
-
-### GitHub Releases
-
-{% embed url="https://github.com/FlickerProjects/TrChat/releases" %}
 
 ### 推荐人物
 

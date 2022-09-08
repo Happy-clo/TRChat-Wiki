@@ -6,24 +6,6 @@ description: 简体中文语言支持。
 
 > ### zh\_CN.yml
 
-{% tabs %}
-{% tab title="巴斯宾" %}
-[https://pastebin.com/xK8dHG7Q](https://pastebin.com/xK8dHG7Q)
-{% endtab %}
-
-{% tab title="下载文件" %}
-[https://pastebin.com/dl/xK8dHG7Q](https://pastebin.com/dl/xK8dHG7Q)
-{% endtab %}
-
-{% tab title="在线查看" %}
-[https://pastebin.com/raw/xK8dHG7Q](https://pastebin.com/raw/xK8dHG7Q)
-{% endtab %}
-
-{% tab title="打印文件" %}
-[https://pastebin.com/print/xK8dHG7Q](https://pastebin.com/print/xK8dHG7Q)
-{% endtab %}
-{% endtabs %}
-
 ```yaml
 Plugin-Loading:
   - '&r'
@@ -49,7 +31,7 @@ Plugin-Updater-Header:
   - '&7▪ &e内容: '
 Plugin-Updater-Footer:
   - ''
-  - '&7▪ &2前往 Github 下载: &a&nhttps://github.com/FlickerProjects/TrChat/releases'
+  - '&7▪ &2前往 Github 下载: &a&nhttps://github.com/TrPlugins/TrChat/releases'
   - '&3--------------------------------------------------'
 Plugin-Debug-On:
   - type: title
@@ -75,12 +57,20 @@ Error-Version: '&8[&3Tr&bChat&8] &c错误 &8| &7检测版本号时发生异常..
 General-Too-Long: '&8[&3Tr&bChat&8] &7你的聊天内容过长. &8[&6{0}&8/&2{1}&8]'
 General-Too-Similar: '&8[&3Tr&bChat&8] &7你的两次聊天内容过于相似, 请勿复读.'
 General-No-Permission: '&8[&3Tr&bChat&8] &7你没有足够的权限执行此操作.'
-General-Muted: '&8[&3Tr&bChat&8] &c你被禁言了!解除时间: {0}'
+General-Muted: '&8[&3Tr&bChat&8] &c你被禁言了!解除时间: {0} 原因: {1}'
+General-Cancel-Muted: '&8[&3Tr&bChat&8] &a你的禁言已被解除.'
 General-Global-Muting: '&8[&3Tr&bChat&8] &c全员禁言中.'
 
 Cooldowns-Chat:
   - type: actionbar
     text: '&7&l您需要等待聊天冷却 &6{0}s &7&l后才能聊天, 请勿频繁刷屏.'
+  - type: sound
+    sound: 'ENTITY_ITEM_BREAK'
+    volume: 1
+    pitch: 2
+Cooldowns-Mention-All:
+  - type: actionbar
+    text: '&3&l您需要等待聊天冷却 &6{0}s &3&l后才能使用提及全体成员.'
   - type: sound
     sound: 'ENTITY_ITEM_BREAK'
     volume: 1
@@ -99,21 +89,54 @@ Cooldowns-Inventory-Show:
     sound: 'ENTITY_ITEM_BREAK'
     volume: 1
     pitch: 0
+Cooldowns-EnderChest-Show:
+  - type: actionbar
+    text: '&3&l您需要等待冷却 &a{0}s &3&l后才能再次展示末影箱.'
+  - type: sound
+    sound: 'ENTITY_ITEM_BREAK'
+    volume: 1
+    pitch: 0
 
 Command-Controller-Deny: '&c&l你不能使用该命令...'
 Command-Controller-Cooldown: '&c&l该命令冷却中...({0})'
 Command-Not-Player: '&8[&3Tr&bChat&8] &c你必须是一个玩家才能执行此操作.'
 Command-Player-Not-Exist: '&8[&3Tr&bChat&8] &7目标玩家未在线或不存在.'
 
-Mentions-Notify:
+Function-Mention-Format:
+  - type: json
+    text: ' [&a@&2{0}] '
+    args:
+      - hover: '&7点击私聊!'
+        suggest: '/tell {1}'
+Function-Mention-Notify:
   - type: actionbar
     text: '&d&l&k|&r &3&l玩家 &a&l{0} &3&l在聊天中At了你 &d&l&k|'
   - type: sound
     sound: 'BLOCK_ANVIL_LAND'
     volume: 1
     pitch: 2
-
-Inventory-Show-Unavailable: '&c&l该背包已过期或不存在...'
+Function-Item-Show-Format:
+  - type: json
+    text: '[&8\[&3{0} &bx{1}&8\]]'
+    args: [ ]
+Function-Inventory-Show-Format:
+  - type: json
+    text: '[&8\[&3{0}的背包&8\]]'
+    args:
+      - hover: '&7点击查看{0}的背包'
+        command: '/view-inventory {1}'
+Function-Inventory-Show-Unavailable: '&c&l该背包已过期或不存在...'
+Function-EnderChest-Show-Format:
+  - type: json
+    text: '[&8\[&3{0}的末影箱&8\]]'
+    args:
+      - hover: '&7点击查看{0}的末影箱'
+        command: '/view-enderchest {1}'
+Function-EnderChest-Show-Unavailable: '&c&l该末影箱已过期或不存在...'
+Function-Mention-All-Format:
+  - type: json
+    text: ' [&a@&2所有人] '
+    args: [ ]
 
 Private-Message-Spy-Format: '&8[&3监听&8] &6{0} &2-> &3{1}&f: &7{2}'
 Private-Message-Spy-On:
@@ -178,8 +201,16 @@ Channel-No-Speak-Permission:
     sound: 'ENTITY_ITEM_BREAK'
     volume: 1
     pitch: 0
+Channel-Bad-Language:
+  - type: actionbar
+    text: '&c你不能骂人哦'
+  - type: sound
+    sound: 'ENTITY_ITEM_BREAK'
+    volume: 1
+    pitch: 0
 
-Mute-Muted-Player: '&8[&3Tr&bChat&8] &7你已禁言 {0} {1}.'
+Mute-Muted-Player: '&8[&3Tr&bChat&8] &7你已禁言 {0} {1}.原因: {2}'
+Mute-Cancel-Muted-Player: '&8[&3Tr&bChat&8] &7你已取消禁言 {0}.'
 Mute-Muted-All: '&8[&3Tr&bChat&8] &7全员禁言已开启.'
 Mute-Cancel-Muted-All: '&8[&3Tr&bChat&8] &7全员禁言已关闭.'
 ```

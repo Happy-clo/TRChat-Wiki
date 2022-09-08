@@ -15,7 +15,8 @@ description: 插件权限列表。
 |   trchat.bypass.itemcd    |                     绕过物品展示冷却                     |
 |   trchat.bypass.filter    |                      绕过过滤器                       |
 |   trchat.bypass.repeat    |                      绕过反复读                       |
-| trchat.bypass.tabcomplete | <p>绕过阻止TAB补全</p><p>(PREVENT-TAB-COMPLETE开启时)</p> |
+| trchat.bypass.tabcomplete | <p>绕过阻止TAB补全</p><p>(Prevent-Tab-Complete开启时)</p> |
+| trchat.bypass.globalmute  |                      绕过全员禁言                      |
 
 > ### 颜色
 

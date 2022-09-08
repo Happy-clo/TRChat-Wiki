@@ -26,9 +26,9 @@ TrChat 插件目录索引
 
 <summary><a href="../qi-ta-xuan-xiang/yu-yan/">lang</a></summary>
 
-[en\_US.yml](../appendix/yu-yan/english.md)
+[en\_US.yml](../appendix/language/en_US.md)
 
-[zh\_CN.yml](../appendix/yu-yan/jian-ti-zhong-wen.md)
+[zh\_CN.yml](../appendix/language/zh_CN.md)
 
 </details>
 
@@ -36,7 +36,7 @@ TrChat 插件目录索引
 
 <summary><a href="pei-zhi/guo-lv-qi.md">filter.yml</a></summary>
 
-脏话过滤器 [filter.yml](pei-zhi/guo-lv-qi.md#filteryml)
+脏话过滤器 [filter.yml](configs/filter.md#filteryml)
 
 </details>
 
@@ -44,7 +44,7 @@ TrChat 插件目录索引
 
 <summary><a href="pei-zhi/gong-neng.md">function.yml</a></summary>
 
-物品展示等各种功能 [function.yml](pei-zhi/gong-neng.md#functionyml)
+物品展示等各种功能 [function.yml](configs/function.md#functionyml)
 
 </details>
 
@@ -52,6 +52,6 @@ TrChat 插件目录索引
 
 <summary><a href="pei-zhi/she-zhi.md">setting.yml</a></summary>
 
-插件内容设置 [settings.yml](pei-zhi/she-zhi.md#settingsyml)
+插件内容设置 [settings.yml](configs/settings.md#settingsyml)
 
 </details>
