@@ -17,7 +17,5 @@ description: 使用彩虹色
 ### 示例
 
 ```
-<g#2:#ffffff:#bbbbbb>text<l>
-<g#2:#ffffff:#bbbbbb:#cccccc:#777777>text<l>
-<g:#ffffff:#bbbbbb>text
+<r:0.4>text<l>
 ```

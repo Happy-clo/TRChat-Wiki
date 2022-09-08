@@ -10,7 +10,7 @@ TrChat 插件目录索引
 
 <details>
 
-<summary><a href="../liao-tian-ge-shi/liao-tian-zu-bie/">channels</a></summary>
+<summary><a href="../channel/examples/">channels</a></summary>
 
 [Global.yml](../channel/examples/global.md)
 
@@ -24,7 +24,7 @@ TrChat 插件目录索引
 
 <details>
 
-<summary><a href="../qi-ta-xuan-xiang/yu-yan/">lang</a></summary>
+<summary><a href="../appendix/language/">lang</a></summary>
 
 [en\_US.yml](../appendix/language/en_US.md)
 
@@ -34,7 +34,7 @@ TrChat 插件目录索引
 
 <details>
 
-<summary><a href="pei-zhi/guo-lv-qi.md">filter.yml</a></summary>
+<summary><a href="install/configs/filter.md">filter.yml</a></summary>
 
 脏话过滤器 [filter.yml](configs/filter.md#filteryml)
 
@@ -42,7 +42,7 @@ TrChat 插件目录索引
 
 <details>
 
-<summary><a href="pei-zhi/gong-neng.md">function.yml</a></summary>
+<summary><a href="install/configs/function.md">function.yml</a></summary>
 
 物品展示等各种功能 [function.yml](configs/function.md#functionyml)
 
@@ -50,7 +50,7 @@ TrChat 插件目录索引
 
 <details>
 
-<summary><a href="pei-zhi/she-zhi.md">setting.yml</a></summary>
+<summary><a href="install/configs/settings.md">setting.yml</a></summary>
 
 插件内容设置 [settings.yml](configs/settings.md#settingsyml)
 

@@ -26,10 +26,10 @@ General:
   Item-Show:
     # 是否启用 
     Enabled: true
+    # 使用权限
+    Permission: 'none'
     # 展示冷却 
     Cooldown: '30s'
-    # 展示格式 
-    Format: '&8[&3{0} &bx{1}&8]'
     # 是否展示原名
     Origin-Name: false 
     # 如果使用展示物品的时候踢人，设置为true即可
@@ -46,13 +46,13 @@ General:
     Actions: [ ]
   # 艾特功能模块
   Mention: 
-  # 是否启用
-    Enabled: true 
+    # 是否启用
+    Enabled: true
+    # 使用权限
+    Permission: 'none'
     # 是否能艾特自己
     Self-Mention: false 
-    # 艾特信息格式
-    Format: '&r &a@&2{0}&r '
-    # 艾特信息冷却 
+    # 艾特冷却 
     Cooldown: '30s'
     # 是否通知玩家，默认true 
     Notify: true
@@ -62,14 +62,27 @@ General:
   Inventory-Show:
     # 是否启用 
     Enabled: true
-    # 查看玩家背包冷却 
+    # 使用权限
+    Permission: 'none'
+    # 展示冷却 
     Cooldown: '30s' 
-    # 查看玩家的信息
-    Format: "&8[&3{0}'s Inventory&8]"
-    #  展示背包触发格式
+    # 展示背包触发格式
     Keys: 
     - '[inv]'
     - '[inventory]'
+  EnderChest-Show:
+    # 是否启用 
+    Enabled: true
+    # 使用权限
+    Permission: 'none'
+    # 展示冷却 
+    Cooldown: '30s'
+    # 展示末影箱触发格式
+    Keys:
+      - '[ender]'
+      - '[enderchest]'
+    # 触发后执行 Kether 动作
+    Actions: [ ]
 
 # 自定义指定聊天内容格式
 Custom:

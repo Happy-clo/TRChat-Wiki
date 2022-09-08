@@ -20,7 +20,7 @@ Options:
 
 # 数据库
 Database:
-  # 数据库类型(SQLite,SQL,Mongodb)
+  # 数据库类型(SQLite,SQL)
   Method: SQLite
   SQLite:
     # 储存数据文件目录
@@ -40,13 +40,6 @@ Database:
     database: trchat
     # 数据库表名
     table: trchat
-  Mongodb:
-    # 数据库地址,mongodb://IP地址:端口
-    client: 'mongodb://localhost:27017'
-    # 数据库名
-    database: trchat
-    # 数据库表名
-    collection: chat
 
 # 聊天功能
 Chat:
