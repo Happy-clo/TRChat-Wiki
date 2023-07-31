@@ -15,7 +15,15 @@ Options:
   Proxy: true
   # 自动加入频道
   Auto-Join: true
-
+# 发送聊天前做判断处理
+Events:
+  Process: |-
+    if check papi %vault_eco_balance% >= 10 then {
+      command papi "eco take %player_name% 10" as console
+    } else {
+      tell "没有足够的金币,无法喊话
+      exit
+    }
 # 绑定全局聊天指令
 Bindings:
   # 聊天前缀

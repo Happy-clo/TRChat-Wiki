@@ -6,8 +6,7 @@ description: 插件功能配置文件。
 
 ### function.yml
 
-```yaml
-# 一般功能
+<pre class="language-yaml"><code class="lang-yaml"># 一般功能
 General: 
   # 控制命令模块
   Command-Controller: 
@@ -58,6 +57,24 @@ General:
     Notify: true
     # 触发后执行 Kether 动作
     Actions: [ ]
+  # 艾特全体玩家
+<strong>  Mention-All:
+</strong><strong>    # 是否启用
+</strong>    Enabled: true
+    # 使用权限
+    Permission: 'trchat.function.mentionall'
+    # 冷却时间
+    Cooldown: '5m'
+    # 是否通知玩家,默认true
+    Notify: true
+    Keys:
+      - "@all"
+      - "@everyone"
+      - "@everybody"
+      - "@所有人"
+      - "@全体成员"
+    # 触发后执行kether动作
+    Actions: [ ]
   # 展示玩家自己的背包
   Inventory-Show:
     # 是否启用 
@@ -83,6 +100,17 @@ General:
       - '[enderchest]'
     # 触发后执行 Kether 动作
     Actions: [ ]
+  # 展示图片
+  Image-Show:
+    # 是否启用
+    Enabled: true
+    # 使用权限
+    Permission: 'trchat.function.imageshow'
+    # 冷却
+    Cooldown: '1m'
+    # 正则表达式(![描述])(url))
+    Key: '!\[([^;]*)\]\(([a-zA-Z]+://[^\s]*)\)'
+    Actions: [ ]
 
 # 自定义指定聊天内容格式
 Custom:
@@ -92,14 +120,14 @@ Custom:
     pattern: '((https|http|ftp|rtsp|mms)?://)[^\s]+' 
     display: 
       # 显示格式内容
-      text: '&8[&f&l网站&8]' 
+      text: '&#x26;8[&#x26;f&#x26;l网站&#x26;8]' 
       # 悬浮框
       hover: 
       - '' 
-      - '&3网站: {0}' 
+      - '&#x26;3网站: {0}' 
       - '' 
-      - '&7点击进入!' 
-      - '&8[&c!&8] &7谨防任何诈骗' 
+      - '&#x26;7点击进入!' 
+      - '&#x26;8[&#x26;c!&#x26;8] &#x26;7谨防任何诈骗' 
       # 点击后打开的链接,无需修改
       url: '{0}'
 
@@ -114,17 +142,17 @@ Custom:
     text-filter: '1-9' 
     # 自定义显示 JSON 组件 
     display: 
-      text: '&8[&3&lQQ&8]' 
+      text: '&#x26;8[&#x26;3&#x26;lQQ&#x26;8]' 
       hover: 
       - '' 
-      - '&3QQ: &b{0}' 
+      - '&#x26;3QQ: &#x26;b{0}' 
       - '' 
-      - '&7这是一个 QQ 账号,' 
-      - '&7你可以点击此项快速打开聊天' 
+      - '&#x26;7这是一个 QQ 账号,' 
+      - '&#x26;7你可以点击此项快速打开聊天' 
       - '' 
-      - '&8[&c!&8] &7请勿进行任何金钱交易' 
-      - '&8[&c!&8] &7交友需谨慎' 
-      url: 'https://wpa.qq.com/msgrd?v=3&uin{0}&site=qq&menu=yes'
+      - '&#x26;8[&#x26;c!&#x26;8] &#x26;7请勿进行任何金钱交易' 
+      - '&#x26;8[&#x26;c!&#x26;8] &#x26;7交友需谨慎' 
+      url: 'https://wpa.qq.com/msgrd?v=3&#x26;uin{0}&#x26;site=qq&#x26;menu=yes'
 
 # 示例 —— B站视频 分享
   shareBilibili: 
@@ -132,58 +160,55 @@ Custom:
     text-filter: '.{12}' 
     # 自定义显示 JSON 组件 
     display: 
-      text: '&8[&f&lBilibili&8]' 
+      text: '&#x26;8[&#x26;f&#x26;lBilibili&#x26;8]' 
       hover: 
       - '' 
-      - '&7这可能是一个 Bilibili 视频,' 
-      - '&7点击即可访问' 
+      - '&#x26;7这可能是一个 Bilibili 视频,' 
+      - '&#x26;7点击即可访问' 
       - '' 
-      - '&3BV号: &b{0}' 
+      - '&#x26;3BV号: &#x26;b{0}' 
       url: 'https://www.bilibili.com/video/BV{0}'
 
 # 示例 —— 防止玩家暴露、分享真实手机号
   hidePhoneNumber: 
     pattern: '((13[0-9])|(14[0-9])|(15[0-9])|(17[0-9])|(18[0-9]))\d{8}' 
     display: 
-      text: '&8[&c&m-&8]' 
+      text: '&#x26;8[&#x26;c&#x26;m-&#x26;8]' 
       hover: 
-      - '&7该内容疑似为手机号码,' 
-      - '&7已自动屏蔽隐藏.' 
+      - '&#x26;7该内容疑似为手机号码,' 
+      - '&#x26;7已自动屏蔽隐藏.' 
       - '' 
-      - '&8[&c!&8] &7请勿分享任何隐私信息'
+      - '&#x26;8[&#x26;c!&#x26;8] &#x26;7请勿分享任何隐私信息'
 
 # 示例 —— 隐藏身份证
   hideIDCardNumber: 
     pattern: '([1-9]\d{5}[12]\d{3}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])\d{3}[0-9xX])' 
     display: 
-      text: '&8[&c&m-&8]' 
+      text: '&#x26;8[&#x26;c&#x26;m-&#x26;8]' 
       hover: 
-      - '&7该内容疑似为身份证号,' 
-      - '&7已自动屏蔽隐藏.' 
+      - '&#x26;7该内容疑似为身份证号,' 
+      - '&#x26;7已自动屏蔽隐藏.' 
       - '' 
-      - '&8[&c!&8] &7请勿分享任何隐私信息' 
-      - '&7严重者可能处于禁言/封禁'
+      - '&#x26;8[&#x26;c!&#x26;8] &#x26;7请勿分享任何隐私信息' 
+      - '&#x26;7严重者可能处于禁言/封禁'
 
 # 示例 —— 高亮 IP
   glowIP: 
     pattern: '(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d).(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d).(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d).(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)' 
     display: 
-      text: '&e&n{0}' 
+      text: '&#x26;e&#x26;n{0}' 
       hover: 
-      - '&7这是一个 IP地址' 
-      - '&7点击复制!' 
+      - '&#x26;7这是一个 IP地址' 
+      - '&#x26;7点击复制!' 
       copy: '{0}'
 
   # 示例 —— 高亮邮箱
   glowEmail: 
     pattern: '\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+.)+[A-Za-z]{2,14}' 
     display: 
-      text: '&e&n{0}' 
+      text: '&#x26;e&#x26;n{0}' 
       hover: 
-      - '&7这是一个邮箱' 
-      - '&7点击复制!' 
+      - '&#x26;7这是一个邮箱' 
+      - '&#x26;7点击复制!' 
       copy: '{0}'
-```
-
-
-
+</code></pre>
