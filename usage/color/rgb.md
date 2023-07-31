@@ -10,12 +10,9 @@ description: 使用RGB颜色。
 
 ### 用法
 
-```
-&{FFFFFF} or &{#FFFFFF}
-```
-
-### 示例
+以下`FFFFFF`代表一个颜色代码
 
 ```
-&{FFFFFF}text or &{#FFFFFF}text
+&{FFFFFF}
+&{#FFFFFF}
 ```

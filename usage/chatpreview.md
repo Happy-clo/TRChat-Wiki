@@ -5,7 +5,11 @@ description: 看到未来
 # 聊天预览
 
 {% hint style="info" %}
-要求：游戏版本 1.19+
+要求：游戏版本 1.19~1.19.2
+{% endhint %}
+
+{% hint style="danger" %}
+本功能在1.19.3之后被弃用
 {% endhint %}
 
 ## 开启
